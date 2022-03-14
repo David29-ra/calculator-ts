@@ -1,11 +1,11 @@
-import { FC, ReactNode } from "react"
+import { ReactNode } from "react"
 import styled from "@emotion/styled"
 
 interface Props {
   children: ReactNode
 }
 
-export const GridContainer: FC<Props> = ({ children }) => {
+export function GridContainer({children}:Props) {
   return (
     <Grid>{children}</Grid>
   )
