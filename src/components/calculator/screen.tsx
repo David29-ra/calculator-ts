@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
+import { ChangeEventHandler } from "react";
 
-// interface DisplayProps {
-//   value: string;
-//   onChange: () => void;
-// }
+interface DisplayProps {
+  value: string;
+  handleChange: ChangeEventHandler;
+}
 
-export function Screen() {
-  return <Display />;
+export function Screen({ value, handleChange }: DisplayProps) {
+  return <Display value={value} onChange={handleChange} />;
 }
 
 const Display = styled.input`

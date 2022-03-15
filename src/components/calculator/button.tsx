@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
+import { MouseEventHandler } from "react";
 
 interface Props {
   button: { value: string, type: string, url?: string },
-  onClick: () => void
+  handleClick: MouseEventHandler
 }
-export function Button({button, onClick}:Props) {
+
+export function Button({button, handleClick}:Props){
   const Number = styled.button`
     display: flex;
     justify-content: center;
@@ -17,7 +19,7 @@ export function Button({button, onClick}:Props) {
     background-color: ${ button.type === "operator" ? "#aec0d3" : "#e5ecf3" };
   `
   return (
-    <Number onClick={onClick} id={button.value} value={button.value}>
+    <Number onClick={handleClick} id={button.value} value={button.value}>
       {button.url ? <Img id={button.value} src={button.url} alt={button.value} /> : button.value}
     </Number>
   )

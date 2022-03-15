@@ -1,6 +1,5 @@
 import { css, Global } from "@emotion/react";
 import { Calculator } from "./components/calculator";
-import background from "./assets/images/back.jpg";
 
 function App() {
   return (

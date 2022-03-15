@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
 
-export function Calendar() {
+export function Calendar({state}: {state: boolean}) {
   return (
-    <CalendarContainer>
-      Calendar
-    </CalendarContainer>
+    state ? <CalendarContainer>Calendar</CalendarContainer> : null
   )
 }
 
