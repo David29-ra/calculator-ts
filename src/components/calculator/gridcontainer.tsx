@@ -12,7 +12,9 @@ export function GridContainer({children}:Props) {
 }
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(6, 100px);
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(6, 80px);
   gap: 10px;
+  width: 100%;
+  height: 100%;
 `

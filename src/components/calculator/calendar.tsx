@@ -19,4 +19,5 @@ const CalendarContainer = styled.div`
   height: 52px;
   background-color: #F3F4F6;
   border: 1px solid #e5e7eb;
+  border-radius: 0 0 10px 10px;
 `

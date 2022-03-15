@@ -23,28 +23,29 @@ const Header = styled.div`
   padding-bottom: 10px;
   padding-left: 24px;
   background-color: #aec0d3;
+  
   p {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 24px;
   }
   span {
     font-weight: 500;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 25px;
+    line-height: 38px;
   }
 `
 
 const Circle = styled.div`
   border-radius: 50%;
   background-color: #ffffff;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
 const Img = styled.img`
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
 `
