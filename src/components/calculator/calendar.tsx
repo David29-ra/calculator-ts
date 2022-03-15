@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
+import { getDate } from "../helpers/getdate";
 
-export function Calendar({state}: {state: boolean}) {
+export function Calendar({state}: {state: boolean}): JSX.Element | null {
   return (
-    state ? <CalendarContainer>Calendar</CalendarContainer> : null
+    state ? <CalendarContainer>{ getDate() }</CalendarContainer> : null
   )
 }
 

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import calculator from "../../assets/images/calculator.svg"
 
-export function Title() {
+export function Title(): JSX.Element {
   return (
     <Header>
       <Circle>

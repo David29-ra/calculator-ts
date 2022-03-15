@@ -1,10 +1,15 @@
 import styled from "@emotion/styled";
+import { MouseEventHandler } from "react";
 import equal from "../../assets/images/equal.svg";
 
-export function Equal(){
+interface Props {
+  handleClick: MouseEventHandler
+}
+
+export function Equal({handleClick}:Props): JSX.Element{
   return (
-    <EqualButton>
-      <Img id="equal" src={equal} alt="equal" />
+    <EqualButton data-type="equal" onClick={handleClick}>
+      <Img data-type="equal" src={equal} alt="equal" />
     </EqualButton>
   )
 }

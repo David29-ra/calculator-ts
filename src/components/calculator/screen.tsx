@@ -6,8 +6,8 @@ interface DisplayProps {
   handleChange: ChangeEventHandler;
 }
 
-export function Screen({ value, handleChange }: DisplayProps) {
-  return <Display value={value} onChange={handleChange} />;
+export function Screen({ value, handleChange }: DisplayProps): JSX.Element {
+  return <Display type="text" value={value} onChange={handleChange} />;
 }
 
 const Display = styled.input`

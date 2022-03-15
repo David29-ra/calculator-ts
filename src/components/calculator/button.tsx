@@ -6,7 +6,7 @@ interface Props {
   handleClick: MouseEventHandler
 }
 
-export function Button({button, handleClick}:Props){
+export function Button({button, handleClick}:Props): JSX.Element{
   const Number = styled.button`
     display: flex;
     justify-content: center;
@@ -19,8 +19,8 @@ export function Button({button, handleClick}:Props){
     background-color: ${ button.type === "operator" ? "#aec0d3" : "#e5ecf3" };
   `
   return (
-    <Number onClick={handleClick} id={button.value} value={button.value}>
-      {button.url ? <Img id={button.value} src={button.url} alt={button.value} /> : button.value}
+    <Number onClick={handleClick} data-type={button.type} value={button.value} >
+      {button.url ? <Img data-type={button.value} src={button.url} alt={button.value} /> : button.value}
     </Number>
   )
   

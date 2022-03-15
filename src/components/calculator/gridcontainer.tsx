@@ -5,7 +5,7 @@ interface Props {
   children: ReactNode
 }
 
-export function GridContainer({children}:Props) {
+export function GridContainer({children}:Props): JSX.Element {
   return (
     <Grid>{children}</Grid>
   )
