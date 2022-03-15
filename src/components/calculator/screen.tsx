@@ -14,4 +14,6 @@ const Display = styled.input`
   text-align: center;
   font-size: 40px;
   line-height: 56px;
+  color: #ffffff;
+  background-color: #336699;
 `

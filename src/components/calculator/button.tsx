@@ -9,11 +9,12 @@ export function Button({button, onClick}:Props) {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #e5e7eb;
-    ${button.type === "number" ? "font-size: 40px; line-height: 56px;" : ""}
+    border: 1px solid ${ button.type === "operator" ? "#336699" : "#a2bbd4" };
+    border-radius: 10px;
+    ${button.type !== "img" ? "font-size: 40px; line-height: 56px;" : ""}
     
     
-    background-color: ${ button.type === "operator" ? "#f3f4f6" : "#ffffff" };
+    background-color: ${ button.type === "operator" ? "#aec0d3" : "#e5ecf3" };
   `
   return (
     <Number onClick={onClick} id={button.value} value={button.value}>

@@ -14,4 +14,5 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 100px);
   grid-template-rows: repeat(6, 100px);
+  gap: 10px;
 `

@@ -15,7 +15,7 @@ const EqualButton = styled.button`
   align-items: center;
   border: 1px solid #e5e7eb;
   grid-area: 5 / 5 / 7 / 6;
-  background-color: #06b6d4;
+  background-color: #aec0d3;
 `
 
 const Img = styled.img`
