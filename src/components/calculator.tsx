@@ -50,7 +50,8 @@ export function Calculator(): JSX.Element {
         return
       },
       "operator": () => {
-        // if (["x", "÷", "+", "-"].includes(data.at(-1))) return
+        const size = data.length;
+        if (["x", "÷", "+", "-"].includes(data.charAt(size - 1))) return
 
         setData(data + value);
         setDot(false)
