@@ -11,19 +11,13 @@ import { evaluate } from "./helpers/evaluate";
 export function Calculator(): JSX.Element {
   const [data, setData] = useState("0");
   const [calendar, setCalendar] = useState(false);
-  const [equal, setEqual] = useState(true);
   const [dot, setDot] = useState(false);
-  console.log(calendar, data);
 
   const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
     const toCompare: string = e.currentTarget.dataset.type!;
     const value: string = e.currentTarget.value;
 
-    console.log(toCompare, typeof toCompare);
-
-    type tConditions = {
-      [key: string]: () => void;
-    }
+    type tConditions = { [key: string]: () => void }
 
     const conditions: tConditions = {
       "clear": () => {
@@ -46,7 +40,6 @@ export function Calculator(): JSX.Element {
       "showcalendar": () => { setCalendar(!calendar) },
       "equal": () => {
         setData(evaluate(data));
-        setEqual(false)
         return
       },
       "operator": () => {
@@ -62,22 +55,24 @@ export function Calculator(): JSX.Element {
         return
       }
     }
-    if (equal) {
-      conditions[toCompare]()
-    } else {
-      console.log("equal is false");
-    }
-    
+
+    conditions[toCompare]()
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setData(e.target.value);
+    let valueInput = e.target.value;
+    let correctInput = e.target.value.match(/^[0-9*/x+÷-]*$/)
+    
+    if (correctInput) {
+      if (valueInput[0] === "0") setData(valueInput.slice(1))
+      else setData(valueInput)
+    }
   }
 
   return(
     <GridContainer>
       <Title />
-      <Screen handleChange={handleInputChange} value={data} />
+      <Screen handleChange={handleInputChange} value={data || "0"} />
       {Data.buttons.map(button => <Button key={button.id} button={button} handleClick={handleButtonClick}/>)}
       <Equal handleClick={handleButtonClick} />
       <Calendar state={ calendar }/>
