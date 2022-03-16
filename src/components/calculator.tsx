@@ -6,6 +6,7 @@ import { Equal } from "./calculator/equal";
 import { GridContainer } from "./calculator/gridcontainer";
 import { Screen } from "./calculator/screen";
 import { Title } from "./calculator/title";
+import { evaluate } from "./helpers/evaluate";
 
 export function Calculator(): JSX.Element {
   const [data, setData] = useState("0");
@@ -44,7 +45,7 @@ export function Calculator(): JSX.Element {
       },
       "showcalendar": () => { setCalendar(!calendar) },
       "equal": () => {
-        setData(String(eval(data)));
+        setData(evaluate(data));
         setEqual(false)
         return
       },
