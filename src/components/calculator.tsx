@@ -51,7 +51,7 @@ export function Calculator(): JSX.Element {
         return
       },
       "number": () => {
-        data === "0" ? setData(value) : setData(data + value);
+        data === "0" || data === "Syntax Error" ? setData(value) : setData(data + value);
         return
       }
     }
