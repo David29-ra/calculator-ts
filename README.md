@@ -6,6 +6,9 @@ It was made by using [React](https://reactjs.org/) and [TypeScript](https://www.
 <br>
 <br>
 <br>
+Link: [Calculator](https://calculator-usestate1.herokuapp.com/)
+<br>
+<br>
 ![calculator](./screen/calculator.png)
 # Getting Started with Create React App
 
